@@ -54,7 +54,7 @@ namespace UnitTestFluentAssertion
             action
                 .Should()
                 .Throw<ArgumentOutOfRangeException>();
-        }        
+        }
 
         [Fact]
         public void Debit_AccountIsFrozen_ThrowsExceptionWithMessage()
@@ -64,7 +64,7 @@ namespace UnitTestFluentAssertion
             var amount = 1000;
 
             var sut = new BankAccount(balance);
-            
+
             //Act
             sut.FreezeAccount();
             Action action = () => sut.Debit(amount);
@@ -84,7 +84,7 @@ namespace UnitTestFluentAssertion
             var amount = 50;
 
             var sut = new BankAccount(balance);
-            
+
             //Act            
             Action action = () => sut.Debit(amount);
 
